@@ -1,2 +1,6 @@
-# notasDesarrolloeIngenieria
-Notas de cursos sobre desarrollo e ingeniería
+# Cursos sobre Desarrollo e Ingeniería
+
+🚀 Lo que veras a continuación son mis notas sobre distintos cursos que he tomado en el aea de desarrollo e ingeniería 💚
+
+Si ves algún punto de mejora o encontraste un error no dudes en hacer tu aporte 💚
+
