@@ -57,7 +57,7 @@ Los atributos llave son aquellos que identifican a la entidad y no pueden ser re
 - Naturales: son inherentes al objeto como el número de serie
 - Clave artificial: no es inherente al objeto y se asigna de manera arbitraria.
 
-## Relaciones
+### Relaciones
 
 Las relaciones nos permiten ligar o unir nuestras diferentes entidades y se representan con rombos. Por convención se definen a través de verbos.
 
@@ -68,11 +68,44 @@ Las relaciones tienen una propiedad llamada cardinalidad y tiene que ver con nú
 - Cardinalidad: 1 a N
 - Cardinalidad: 0 a N
 
-## Diagrama ER
+### Diagrama ER
 
 Un diagrama es como un mapa y nos ayuda a entender cuáles son las entidades con las que vamos a trabajar, cuáles son sus relaciones y qué papel van a jugar en las aplicaciones de la base de datos.
 
 ![image](https://user-images.githubusercontent.com/86577488/205941992-9287147a-b7b2-42d2-ac9b-3ef89706497c.png)
+
+### Tipos de datos y constraints
+
+Para llevar a la práctica un diagrama debemos ir más allá y darle detalle con parámetros como:
+
+**Tipos de dato:**
+
+- Texto: CHAR(n), VARCHAR(n), TEXT
+- Números: INTEGER, BIGINT, SMALLINT, DECIMAL(n,s), NUMERIC(n,s)
+- Fecha/hora: DATE, TIME, DATETIME, TIMESTAMP
+- Lógicos: BOOLEAN
+
+**Constraints (Restricciones)**
+
+- NOT NULL: Se asegura que la columna no tenga valores nulos
+- UNIQUE: Se asegura que cada valor en la columna no se repita
+- PRIMARY KEY: Es una combinación de NOT NULL y UNIQUE
+- FOREIGN KEY: Identifica de manera única una tupla en otra tabla
+- CHECK: Se asegura que el valor en la columna cumpla una condición dada
+- DEFAULT: Coloca un valor por defecto cuando no hay un valor especificado
+- INDEX: Se crea por columna para permitir búsquedas más rápidas
+
+
+### Diagrama Físico: normalización
+
+La normalización como su nombre lo indica nos ayuda a dejar todo de una forma normal. Esto obedece a las 12 reglas de Codd y nos permiten separar componentes en la base de datos:
+
+- Primera forma normal (1FN): Atributos atómicos (Sin campos repetidos)
+- Segunda forma normal (2FN): Cumple 1FN y cada campo de la tabla debe depender de una clave única.
+- Tercera forma normal (3FN): Cumple 1FN y 2FN y los campos que NO son clave, NO deben tener dependencias.
+- Cuarta forma normal (4FN): Cumple 1FN, 2FN, 3FN y los campos multivaluados se identifican por una clave única.
+
+
 
 ## Bases de datos no relacionales
 
