@@ -72,7 +72,7 @@ Las relaciones tienen una propiedad llamada cardinalidad y tiene que ver con nú
 
 Un diagrama es como un mapa y nos ayuda a entender cuáles son las entidades con las que vamos a trabajar, cuáles son sus relaciones y qué papel van a jugar en las aplicaciones de la base de datos.
 
-
+![image](https://user-images.githubusercontent.com/86577488/205941992-9287147a-b7b2-42d2-ac9b-3ef89706497c.png)
 
 ## Bases de datos no relacionales
 
