@@ -107,6 +107,10 @@ La normalización como su nombre lo indica nos ayuda a dejar todo de una forma n
 
 ![image](https://user-images.githubusercontent.com/86577488/205947309-5d8b4a07-fc17-4447-8b19-5b5e47336245.png)
 
+#### Ejemplo en el proyecto del curso
+
+
+
 ## Bases de datos no relacionales
 
 - cassandra
