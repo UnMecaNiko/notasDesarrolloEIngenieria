@@ -105,7 +105,7 @@ La normalización como su nombre lo indica nos ayuda a dejar todo de una forma n
 - Tercera forma normal (3FN): Cumple 1FN y 2FN y los campos que NO son clave, NO deben tener dependencias.
 - Cuarta forma normal (4FN): Cumple 1FN, 2FN, 3FN y los campos multivaluados se identifican por una clave única.
 
-
+![image](https://user-images.githubusercontent.com/86577488/205947309-5d8b4a07-fc17-4447-8b19-5b5e47336245.png)
 
 ## Bases de datos no relacionales
 
