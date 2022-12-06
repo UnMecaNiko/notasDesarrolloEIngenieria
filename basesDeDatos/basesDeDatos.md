@@ -109,7 +109,30 @@ La normalización como su nombre lo indica nos ayuda a dejar todo de una forma n
 
 #### Ejemplo en el proyecto del curso
 
+![image](https://user-images.githubusercontent.com/86577488/205987330-7673c803-37ef-46fc-abe5-33dfa9b26273.png)
 
+## RDBMS | Administrador de datos relacionales
+
+Hay dos maneras de acceder a manejadores de bases de datos:
+
+- Instalar en máquina local un administrador de bases relacional.
+- Tener ambientes de desarrollo especiales o servicios cloud.
+En este curso usaremos MySQL porque tiene un impacto histórico siendo muy utilizado y además es software libre y gratuito. La versión 5.6.43 es compatible con la mayoría de aplicaciones y frameworks.
+
+- Root es el usuario principal que tendrá todos los permisos y por lo tanto en ambientes de producción hay que tener mucho cuidado al configurarlo.
+
+**RDB (relational database)**
+
+**RDBMS (Relational DataBase Management System) Sistema Manejador de Bases de datos relacionales.**
+
+La diferencia entre ambos es que las BBDD son un conjunto de datos pertenecientes ( o al menos en teoría) a un mismo tipo de contexto, que guarda los datos de forma persistente para un posterior uso, y el Sistema de gestión de BBDD o sistema manejador, es el que nos permite acceder a ella, es un software, herramienta que sirve de conexión entre las BBDD y el usuario (nos presenta una interfaz para poder gestionarla, manejarla).
+
+**RDBMS**
+
+- MySQL
+- PostgreSQL
+- Etc
+Todas toman un lenguaje base, pero cada uno lo apropia, imponiéndole diferentes reglas y características.
 
 ## Bases de datos no relacionales
 
@@ -121,7 +144,20 @@ La normalización como su nombre lo indica nos ayuda a dejar todo de una forma n
 ## Tipos de Servicios:
 
 - Auto administrados: Es la base de datos que instalas tú y te encargas de actualizaciones, mantenimiento, etc.
+
 - Administrados: Servicios que ofrecen las nubes modernas como Azure y no debes preocuparte por mantenimiento o actualizaciones.
+
+Hoy en día muchas empresas ya no tienen instalados en sus servidores los RDBMS sino que los contratan a otras personas. Estos servicios administrados cloud te permiten concentrarte en la base de datos y no en su administración y actualización.
+
+## Lenguaje SQL
+
+### Historia de SQL
+
+SQL significa Structured Query Language y tiene una estructura clara y fija. Su objetivo es hacer un solo lenguaje para consultar cualquier manejador de bases de datos volviéndose un gran estándar.
+
+Ahora existe el NOSQL o Not Only Structured Query Language que significa que no sólo se utiliza SQLen las bases de datos no relacionales.
+
+
 
 # Helpful Links
 
