@@ -4,4 +4,5 @@
 
 Si ves algún punto de mejora o encontraste un error no dudes en hacer tu aporte 💚
 
-- [Curso de Fundamentos de Bases de Datos](./basesDeDatos.md)
+- [Curso de Fundamentos de Bases de Datos](./basesDeDatos/basesDeDatos.md)
+

@@ -37,6 +37,15 @@ En la imagen puedes observar como ejemplo que la enidad Laptops posee diferentes
 
 ![](https://static.platzi.com/media/user_upload/ejemplo%20de%20entidad-c0b48b06-ba54-4026-add0-e7e522d6f47e.jpg)
 
+#### Tipos de entidades
+
+**Entidades fuertes**: son entidades que pueden sobrevivir por sí solas.
+
+**Entidades débiles**: no pueden existir sin una entidad fuerte y se representan con un cuadrado con doble línea.
+
+- Identidades débiles por identidad: no se diferencian entre sí más que por la clave de su identidad fuerte.
+- Identidades débiles por existencia: se les asigna una clave propia.
+
 ### Atributo
 
 Son las características o propiedades que describen a la entidad (se encierra en un óvalo). Los atributos se componen de:
@@ -48,14 +57,22 @@ Los atributos llave son aquellos que identifican a la entidad y no pueden ser re
 - Naturales: son inherentes al objeto como el número de serie
 - Clave artificial: no es inherente al objeto y se asigna de manera arbitraria.
 
-### Tipos de entidades
+## Relaciones
 
-**Entidades fuertes**: son entidades que pueden sobrevivir por sí solas.
+Las relaciones nos permiten ligar o unir nuestras diferentes entidades y se representan con rombos. Por convención se definen a través de verbos.
 
-**Entidades débiles**: no pueden existir sin una entidad fuerte y se representan con un cuadrado con doble línea.
+Las relaciones tienen una propiedad llamada cardinalidad y tiene que ver con números. Cuántos de un lado pertenecen a cuántos del otro lado:
 
-- Identidades débiles por identidad: no se diferencian entre sí más que por la clave de su identidad fuerte.
-- Identidades débiles por existencia: se les asigna una clave propia.
+- Cardinalidad: 1 a 1
+- Cardinalidad: 0 a 1
+- Cardinalidad: 1 a N
+- Cardinalidad: 0 a N
+
+## Diagrama ER
+
+Un diagrama es como un mapa y nos ayuda a entender cuáles son las entidades con las que vamos a trabajar, cuáles son sus relaciones y qué papel van a jugar en las aplicaciones de la base de datos.
+
+
 
 ## Bases de datos no relacionales
 
