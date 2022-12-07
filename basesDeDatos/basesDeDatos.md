@@ -109,7 +109,30 @@ La normalización como su nombre lo indica nos ayuda a dejar todo de una forma n
 
 #### Ejemplo en el proyecto del curso
 
+![image](https://user-images.githubusercontent.com/86577488/205987330-7673c803-37ef-46fc-abe5-33dfa9b26273.png)
 
+## RDBMS | Administrador de datos relacionales
+
+Hay dos maneras de acceder a manejadores de bases de datos:
+
+- Instalar en máquina local un administrador de bases relacional.
+- Tener ambientes de desarrollo especiales o servicios cloud.
+En este curso usaremos MySQL porque tiene un impacto histórico siendo muy utilizado y además es software libre y gratuito. La versión 5.6.43 es compatible con la mayoría de aplicaciones y frameworks.
+
+- Root es el usuario principal que tendrá todos los permisos y por lo tanto en ambientes de producción hay que tener mucho cuidado al configurarlo.
+
+**RDB (relational database)**
+
+**RDBMS (Relational DataBase Management System) Sistema Manejador de Bases de datos relacionales.**
+
+La diferencia entre ambos es que las BBDD son un conjunto de datos pertenecientes ( o al menos en teoría) a un mismo tipo de contexto, que guarda los datos de forma persistente para un posterior uso, y el Sistema de gestión de BBDD o sistema manejador, es el que nos permite acceder a ella, es un software, herramienta que sirve de conexión entre las BBDD y el usuario (nos presenta una interfaz para poder gestionarla, manejarla).
+
+**RDBMS**
+
+- MySQL
+- PostgreSQL
+- Etc
+Todas toman un lenguaje base, pero cada uno lo apropia, imponiéndole diferentes reglas y características.
 
 ## Bases de datos no relacionales
 
@@ -121,8 +144,69 @@ La normalización como su nombre lo indica nos ayuda a dejar todo de una forma n
 ## Tipos de Servicios:
 
 - Auto administrados: Es la base de datos que instalas tú y te encargas de actualizaciones, mantenimiento, etc.
+
 - Administrados: Servicios que ofrecen las nubes modernas como Azure y no debes preocuparte por mantenimiento o actualizaciones.
+
+Hoy en día muchas empresas ya no tienen instalados en sus servidores los RDBMS sino que los contratan a otras personas. Estos servicios administrados cloud te permiten concentrarte en la base de datos y no en su administración y actualización.
+
+## Lenguaje SQL
+
+### Historia de SQL
+
+SQL significa Structured Query Language y tiene una estructura clara y fija. Su objetivo es hacer un solo lenguaje para consultar cualquier manejador de bases de datos volviéndose un gran estándar.
+
+Ahora existe el NOSQL o Not Only Structured Query Language que significa que no sólo se utiliza SQLen las bases de datos no relacionales.
+
+### DDL | Data Definition Language
+
+nos ayuda a crear la estructura de una base de datos. Existen 3 grandes comandos:
+
+- Create: Nos ayuda a crear bases de datos, tablas, vistas, índices, etc.
+- Alter: Ayuda a alterar o modificar entidades.
+- Drop: Nos ayuda a borrar. Hay que tener cuidado al utilizarlo.
+3 objetos que manipularemos con el lenguaje DDL:
+
+- Database o bases de datos.
+- Table o tablas. Son la traducción a SQL de las entidades.
+- View o vistas: Se ofrece la proyección de los datos de la base de datos de forma entendible.
+
+### CREATE VIEW y DDL ALTER
+
+Para agregar la vista de clientes, puedes usar el siguiente código desde la pestaña query 1:
+
+```sql
+INSERT INTO `platziblog`.`people` (`person_id`, `last_name`, `first_name`, `address`, `city`) 
+VALUES ('1', 'Vásquez', 'Israel', 'Calle Famosa Num 1', 'México'),
+	       ('2', 'Hernández', 'Mónica', 'Reforma 222', 'México'),
+	       ('3', 'Alanis', 'Edgar', 'Central 1', 'Monterrey');
+```
+
+### DDL drop
+
+Está puede ser la sentencia ¡más peligrosa! (????), sobre todo cuando somos principiantes. Básicamente borra o desaparece de nuestra base de datos algún elemento.
+
+### DML
+
+DML trata del contenido de la base de datos. Son las siglas de Data Manipulation Language y sus comandos son:
+
+- Insert: Inserta o agrega nuevos registros a la tabla.
+- Update: Actualiza o modifica los datos que ya existen.
+![image](https://user-images.githubusercontent.com/86577488/206004346-4258ffd1-eb5c-4b33-9c6e-235a615de9fb.png)
+- Delete: Esta sentencia es riesgosa porque puede borrar el contenido de una tabla.
+- Select: Trae información de la base de datos.
+
+**ex:**
+```sql
+INSERT INTO people (last_name,first_name,address, city)
+VALUES ('Hernandez','Laura','Calle 21','Monterrey')
+
+
+```
 
 # Helpful Links
 
 - [Codd's 12 rules](https://www.w3resource.com/sql/sql-basic/codd-12-rule-relation.php)
+
+- [MySQL What is DDL, DML and DCL](https://www.w3schools.in/mysql/ddl-dml-dcl/)
+
+
