@@ -232,6 +232,10 @@ Ahora que tenemos todo el esquema montado podemos ver la conexión de nuestras t
 
 ![image](https://user-images.githubusercontent.com/86577488/206472147-1cb66142-fa3d-4611-9f34-c891334060b0.png)
 
+
+
+
+
 ## Consultas (Querys) a una base de datos
 
 Las consultas o queries a una base de datos son una parte fundamental ya que esto podría salvar un negocio o empresa.
@@ -246,8 +250,64 @@ El query tiene básicamente 2 partes: SELECT y FROM y puede aparecer una tercera
 ![image](https://user-images.githubusercontent.com/86577488/206473971-2748e767-33d1-4252-91f6-694fed651583.png)
 
 
+### SELECT
+Se encarga de proyectar o mostrar datos.
 
+- El nombre de las columnas o campos que estamos consultando puede ser cambiado utilizando AS después del nombre del campo y poniendo el nuevo que queremos tener:
 
+```sql
+SELECT titulo AS encabezado
+FROM posts;
+```
+- Existe una función de SELECT para poder contar la cantidad de registros. Esa información (un número) será el resultado del query:
+
+```sql
+SELECT COUNT(*)
+FROM posts;
+```
+
+### FROM
+
+FROM indica de dónde se deben traer los datos y puede ayudar a hacer sentencias y filtros complejos cuando se quieren unir tablas. La sentencia compañera que nos ayuda con este proceso es JOIN.
+
+![image](https://user-images.githubusercontent.com/86577488/206533579-e44ba701-43dd-4666-8769-dbeddaa20f10.png)
+
+Los diagramas de Venn son círculos que se tocan en algún punto para ver dónde está la intersección de conjuntos. Ayudan mucho para poder formular la sentencia JOIN de la manera adecuada dependiendo del query que se quiere hacer.
+
+```sql
+SELECT	*
+FROM	usuarios 
+	JOIN posts on usuarios.id = posts.usuario_id;
+```
+
+### WHERE
+
+WHERE es la sentencia que nos ayuda a filtrar tuplas o registros dependiendo de las características que elegimos.+
+
+- La propiedad LIKE nos ayuda a traer registros de los cuales conocemos sólo una parte de la información.
+- La propiedad BETWEEN nos sirve para arrojar registros que estén en el medio de dos. Por ejemplo los registros con id entre 20 y 30.
+
+### NULL | NOT NULL
+
+El valor nulo en una tabla generalmente es su valor por defecto cuando nadie le asignó algo diferente. La sintaxis para hacer búsquedas de datos nulos es IS NULL. La sintaxis para buscar datos que no son nulos es IS NOT NULL.
+
+```sql
+select * 
+from posts 
+where usuario_id is not null
+```
+
+### GROUP BY
+
+GROUP BY tiene que ver con agrupación. Indica a la base de datos qué criterios debe tener en cuenta para agrupar.
+
+```sql
+SELECT 
+    MONTHNAME(fecha_publicacion) fechita, COUNT(*) post_quantity
+FROM
+    posts
+GROUP BY fecha_publicacion
+```
 
 # Helpful Links
 
@@ -255,4 +315,5 @@ El query tiene básicamente 2 partes: SELECT y FROM y puede aparecer una tercera
 
 - [MySQL What is DDL, DML and DCL](https://www.w3schools.in/mysql/ddl-dml-dcl/)
 
+- [GenerateData](https://generatedata.com/)
 
