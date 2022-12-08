@@ -232,6 +232,21 @@ Ahora que tenemos todo el esquema montado podemos ver la conexión de nuestras t
 
 ![image](https://user-images.githubusercontent.com/86577488/206472147-1cb66142-fa3d-4611-9f34-c891334060b0.png)
 
+## Consultas (Querys) a una base de datos
+
+Las consultas o queries a una base de datos son una parte fundamental ya que esto podría salvar un negocio o empresa.
+Alrededor de las consultas a las bases de datos se han creado varias especialidades como ETL o transformación de datos, business intelligence e incluso machine learning.
+
+Los queries son la forma en la que estructuramos las preguntas que se harán a la base de datos. Transforma preguntas en sintaxis.
+
+El query tiene básicamente 2 partes: SELECT y FROM y puede aparecer una tercera como WHERE.
+
+- La estrellita o asterisco (\*) quiere decir que vamos a seleccionar todo sin filtrar campos.
+
+![image](https://user-images.githubusercontent.com/86577488/206473971-2748e767-33d1-4252-91f6-694fed651583.png)
+
+
+
 
 
 # Helpful Links
