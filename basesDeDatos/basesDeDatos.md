@@ -134,12 +134,16 @@ La diferencia entre ambos es que las BBDD son un conjunto de datos perteneciente
 - Etc
 Todas toman un lenguaje base, pero cada uno lo apropia, imponiéndole diferentes reglas y características.
 
+
+
 ## Bases de datos no relacionales
 
 - cassandra
 - elasticsearch
 - neo4j
 - MongoDB
+
+
 
 ## Tipos de Servicios:
 
@@ -148,6 +152,8 @@ Todas toman un lenguaje base, pero cada uno lo apropia, imponiéndole diferentes
 - Administrados: Servicios que ofrecen las nubes modernas como Azure y no debes preocuparte por mantenimiento o actualizaciones.
 
 Hoy en día muchas empresas ya no tienen instalados en sus servidores los RDBMS sino que los contratan a otras personas. Estos servicios administrados cloud te permiten concentrarte en la base de datos y no en su administración y actualización.
+
+
 
 ## Lenguaje SQL
 
@@ -199,9 +205,34 @@ DML trata del contenido de la base de datos. Son las siglas de Data Manipulation
 ```sql
 INSERT INTO people (last_name,first_name,address, city)
 VALUES ('Hernandez','Laura','Calle 21','Monterrey')
-
-
 ```
+
+## Proyecto Platzi Blog
+
+![image](https://user-images.githubusercontent.com/86577488/206464043-6376ac1d-c28a-4ab8-b4bb-762bb63c3943.png)
+
+- Una buena práctica es comenzar creando las entidades que no tienen una llave foránea.
+![image](https://user-images.githubusercontent.com/86577488/206466701-2944ee95-304b-4837-ad52-cc620788831d.png)
+
+- Generalmente en los nombres de bases de datos se evita usar eñes o acentos para evitar problemas en los manejadores de las bases de datos.
+
+Ahora se configuran las llaves foráneas.
+
+![image](https://user-images.githubusercontent.com/86577488/206469262-4ef8a116-5f10-4851-8fe8-171596e497f0.png)
+
+Para la relación N a N se debe hacer una tabla intermedia que tenga tres columnas: id, post_id, etiqueta_id. La configuración de las llaves foráneas sería así:
+
+> Las tablas transitivas sirven como puente para unir dos tablas. No tienen contenido semántico.
+
+![image](https://user-images.githubusercontent.com/86577488/206471837-1acb7350-495d-4a20-8ef6-3e59e38e9be6.png)
+
+Ahora que tenemos todo el esquema montado podemos ver la conexión de nuestras tablas de forma gráfica usando la opción de ingeniería inversa.
+
+> Reverse Engineer nos reproduce el esquema del cual nos basamos para crear nuestras tablas. Es útil cuando llegas a un nuevo trabajo y quieres entender cuál fue la mentalidad que tuvieron al momento de crear las bases de datos.
+
+![image](https://user-images.githubusercontent.com/86577488/206472147-1cb66142-fa3d-4611-9f34-c891334060b0.png)
+
+
 
 # Helpful Links
 
