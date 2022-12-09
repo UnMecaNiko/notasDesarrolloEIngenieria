@@ -309,6 +309,39 @@ FROM
 GROUP BY fecha_publicacion
 ```
 
+### ORDER BY && HAVING
+
+La sentencia ORDER BY tiene que ver con el ordenamiento de los datos dependiendo de los criterios que quieras usar.
+
+- ASC sirve para ordenar de forma ascendente.
+- DESC sirve para ordenar de forma descendente.
+- LIMIT se usa para limitar la cantidad de resultados que arroja el query.
+
+HAVING tiene una similitud muy grande con WHERE, sin embargo el uso de ellos depende del orden. Cuando se quiere seleccionar tuplas agrupadas únicamente se puede hacer con HAVING.
+
+```sql
+SELECT 
+    *
+FROM
+    posts
+WHERE
+    YEAR(fecha_publicacion) < '2028'
+ORDER BY fecha_publicacion DESC
+
+SELECT 
+    MONTHNAME(fecha_publicacion) AS post_month,
+    estatus,
+    COUNT(*) AS post_quantity
+FROM
+    posts
+GROUP BY estatus , post_month
+ORDER BY post_month
+```
+### Nested querys
+
+
+
+
 # Helpful Links
 
 - [Codd's 12 rules](https://www.w3resource.com/sql/sql-basic/codd-12-rule-relation.php)
